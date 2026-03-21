@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
 
     // Validate points is a positive finite number
     if (!points || !Number.isFinite(points) || points <= 0) {
-      return apiError('INVALID_PARAMETER', 400, 'points must be a positive number');
+      return apiError('INVALID_REQUEST', 400, 'points must be a positive number');
     }
 
     // Resolve model from request headers
